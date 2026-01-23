@@ -1,11 +1,11 @@
   {    
     "layer": "top",
     "position": "top",
-    "height": 27,
+    "height": 30,
 
-    "modules-left": ["hyprland/workspaces", "clock"],
-    "modules-center": ["mpris"],
-    "modules-right": ["tray", "network", "battery", "wireplumber"],
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["wireplumber", "mpris", "network", "battery",],
 
     "clock": {
         "format": "  {:%H:%M}",
