@@ -6,6 +6,15 @@
 @define-color	base #14120f;
 @define-color	base-rgb  rgba(40, 40, 40);
 
+
+/* Everforest colors */
+@define-color everforest-background #1e2326;	
+@define-color	everforest-altbackground  #232a2e;
+@define-color	everforest-foreground  #555f66;
+@define-color	everforest-active #a7c080;
+@define-color	everforest-selected #272e33;
+@define-color	everforest-selected-text #a7c080;
+
 * {
   font-family: 'CaskaydiaCove Nerd Font', monospace;
   font-size: 14px;

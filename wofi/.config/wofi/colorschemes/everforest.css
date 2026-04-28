@@ -1,0 +1,7 @@
+/* Everforest colors */
+@define-color background #1e2326;	
+@define-color	altbackground  #232a2e;
+@define-color	foreground  #555f66;
+@define-color	active #a7c080;
+@define-color	selected #272e33;
+@define-color	selected-text #a7c080;
