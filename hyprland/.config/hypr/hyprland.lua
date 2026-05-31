@@ -31,7 +31,9 @@ hl.monitor({
 local terminal    = "kitty"
 local fileManager = "dolphin"
 local menu        = "wofi --show drun"
-
+local appflowy    = "io.appflowy.AppFlowy"
+local obsidian    = "md.obsidian.Obsidian"
+local calculator  = "com.github.subhadeepjasu.pebbles"
 
 -------------------
 ---- AUTOSTART ----
@@ -293,10 +295,10 @@ hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 hl.bind("Print",         hl.dsp.exec_cmd("env HYPRSHOT_DIR=/home/mr-house/Pictures/Screenshots hyprshot -m window"))
 hl.bind("SHIFT + Print", hl.dsp.exec_cmd("env HYPRSHOT_DIR=/home/mr-house/Pictures/Screenshots hyprshot -m region"))
 
--- Notes
-hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("io.appflowy.AppFlowy "))
-hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("md.obsidian.Obsidian"))
-
+-- Apps  /* Variables are defined at the top */
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(appflowy))
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(obsidian))
+hl.bind("XF86Calculator", hl.dsp.exec_cmd(calculator))
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
