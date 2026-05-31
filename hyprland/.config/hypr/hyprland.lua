@@ -33,7 +33,7 @@ local fileManager = "dolphin"
 local menu        = "wofi --show drun"
 local appflowy    = "io.appflowy.AppFlowy"
 local obsidian    = "md.obsidian.Obsidian"
-local calculator  = "com.github.subhadeepjasu.pebbles"
+local calculator  = "io.github.Qalculate.qalculate-qt"
 
 -------------------
 ---- AUTOSTART ----
@@ -71,6 +71,8 @@ end)
 hl.env("WLR_DRM_NO_ATOMIC", "1")
 hl.env("XCURSOR_SIZE", "20")
 hl.env("HYPRCURSOR_SIZE", "20")
+
+hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 
 -----------------------
 ----- PERMISSIONS -----
