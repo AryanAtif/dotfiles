@@ -1,4 +1,4 @@
-  {    
+{    
     "layer": "top",
     "position": "top",
     "height": 0,
@@ -23,8 +23,10 @@
             "warning": 25,
             "critical": 10
         }
-    },
-  */
+    },*/
+  "hyprland/workspaces": {
+    "on-click": "activate",
+  },
     "mpris": {
 
         "format": "{player_icon} {title} | {artist} - {length}",
@@ -35,7 +37,7 @@
         "status-icons": {
             "paused": "󰏤"
         },
-      "max-length": 30
+      "max-length": 25
     },  
 
     "network": {
@@ -56,3 +58,5 @@
         "format-icons": ["", "", ""]
     }
 }
+},
+

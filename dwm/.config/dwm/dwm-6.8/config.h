@@ -108,6 +108,9 @@ static const Key keys[] = {
   { 0,             XF86XK_AudioMute,         spawn,          {.v = mute_vol } },
   { 0,             XF86XK_AudioLowerVolume,  spawn,          {.v = down_vol } },
   { 0,             XF86XK_AudioRaiseVolume,  spawn,          {.v = up_vol } },
+  /* The Screenshot Keys */  
+  { 0,         XK_Print, spawn, SHCMD("/path/to/scripts/screenshot.sh") },
+  { ShiftMask, XK_Print, spawn, SHCMD("/path/to/scripts/screenshotsel.sh") },
 };
 
 /* button definitions */
