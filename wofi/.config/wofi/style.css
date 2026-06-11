@@ -8,9 +8,9 @@
 
 
 /* Everforest colors */
-@define-color everforest-background #1e2326;	
-@define-color	everforest-altbackground  #232a2e;
-@define-color	everforest-foreground  #555f66;
+@define-color everforest-background #1E2326;	
+@define-color	everforest-altbackground  #272E33;
+@define-color	everforest-foreground  #2E383C;
 @define-color	everforest-active #a7c080;
 @define-color	everforest-selected #272e33;
 @define-color	everforest-selected-text #a7c080;
@@ -24,17 +24,17 @@
 window {
   margin: 0px;
   padding: 7px;
-  border: 2px solid @gruv-white;
+  border: 2px solid @everforest-foreground;
   border-radius: 8px;
-  background-color: @base;
+  background-color: @everforest-background;
 }
 
 /* Inner Box */
 #inner-box {
   margin: 5px;
-  padding: 7px;
+  padding: 3px;
   border: none;
-  background-color: @base;
+  background-color: @everforest-foreground;
 }
 
 /* Outer Box */
@@ -42,7 +42,7 @@ window {
   margin: 5px;
   padding: 7px;
   border: none;
-  background-color: @base;
+  background-color: @everforest-background;
 }
 
 /* Scroll */
@@ -50,7 +50,7 @@ window {
   margin: 0px;
   padding: 10px;
   border: none;
-  background-color: @base;
+  background-color: @everforest-background;
 }
 
 /* Input */
@@ -59,44 +59,44 @@ window {
   padding: 10px;
   border: none;
   border-radius: 0.1em;
-  color: @text;
-  background-color: @base;
+  color: @everforest-selected-text;
+  background-color: @everforest-foreground;
 }
 
 #input image {
     border: none;
-    color: @gruv-orange;
+    color: @everforest-active;
 }
 
 #input * {
-  outline: 4px solid @gruv-orange!important;
+  outline: 4px solid @everforest-active!important;
 }
 
 /* Text */
 #text {
   margin: 5px;
   border: none;
-  color: @text;
+  color: @everforest-foreground;
 }
 
 #entry {
-  background-color: @base;
+  background-color: @everforest-background;
 }
 
 #entry arrow {
   border: none;
-  color: @gruv-orange;
+  color: @everforest-active;
 }
 
 /* Selected Entry */
 #entry:selected {
-  border: 0.11em solid @gruv-orange;
+  border: 0.11em solid @everforest-active;
 }
 
 #entry:selected #text {
-  color: @gruv-dark;
+  color: @everforest-selected-text;
 }
 
 #entry:drop(active) {
-  background-color: @gruv-orange!important;
+  background-color: @everforest-background!important;
 }

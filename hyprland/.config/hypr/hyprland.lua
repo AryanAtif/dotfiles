@@ -186,13 +186,6 @@ hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "
 --     border_size = 0,
 --     rounding    = 0,
 -- })
--- hl.window_rule({
---     name  = "no-gaps-f1",
---     match = { float = false, workspace = "f[1]" },
---     border_size = 0,
---     rounding    = 0,
--- })
-
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
     dwindle = {
@@ -293,9 +286,16 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
+-- Dwindle
+hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
+
 -- Screenshot
 hl.bind("Print",         hl.dsp.exec_cmd("env HYPRSHOT_DIR=/home/mr-house/Pictures/Screenshots hyprshot -m window"))
 hl.bind("SHIFT + Print", hl.dsp.exec_cmd("env HYPRSHOT_DIR=/home/mr-house/Pictures/Screenshots hyprshot -m region"))
+
+-- Screenlock
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 
 -- Apps  /* Variables are defined at the top */
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(appflowy))
@@ -385,3 +385,11 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
+hl.window_rule({
+    name  = calculator,
+    match = {class = calculator },
+    float = true,
+    fullscreen = false,
+ })
+
