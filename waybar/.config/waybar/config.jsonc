@@ -6,7 +6,10 @@
     "exclusive": true,
     "passtrough": false,
 
-    "modules-left": ["hyprland/workspaces"],
+    /* Uncomment this if you're using hyprland 
+    "modules-left": ["hyprland/workspaces"],*/
+    /* Comment this if you're using hyprland */
+    "modules-left": ["sway/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["wireplumber", "mpris", "network", "battery",],
 
@@ -24,7 +27,7 @@
             "critical": 10
         }
     },*/
-  "hyprland/workspaces": {
+  "sway/workspaces": {
     "on-click": "activate",
   },
     "mpris": {
