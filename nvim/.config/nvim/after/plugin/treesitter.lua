@@ -1,7 +1,7 @@
-require('nvim-treesitter').install {'python', 'javascript' }
+require('nvim-treesitter').install {'html', 'css', 'python', 'javascript' }
 
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = {'python', 'javascript'},
+  pattern = {'html', 'css', 'python', 'javascript'},
   callback = function()
     vim.treesitter.start()                                    -- highlighting
     vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'     -- folds
