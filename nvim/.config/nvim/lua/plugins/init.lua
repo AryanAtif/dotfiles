@@ -1,28 +1,27 @@
+
 return {
-  {
-    "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
-    opts = require "configs.conform",
-  },
+	{
+-- Telescope
+	    'nvim-telescope/telescope.nvim', version = '*',
+	    dependencies = {
+		'nvim-lua/plenary.nvim',
+		-- optional but recommended
+		{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+	    },
+	},
 
-  -- These are some examples, uncomment them if you want to see them work!
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require "configs.lspconfig"
-    end,
-  },
+-- Treesitter
+	{
+	  'nvim-treesitter/nvim-treesitter',
+	  dependencies = { 'neovim-treesitter/treesitter-parser-registry' },
+	  lazy = false,
+	  build = ':TSUpdate',
+	},
 
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
-
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+-- Color theme: NightFox 
+	{
+		"EdenEast/nightfox.nvim" 
+	} 
 }
+
+
