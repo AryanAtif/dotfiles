@@ -13,6 +13,7 @@ set $term kitty
 set $menu wofi --show drun
 set $file_manager dolphin 
 
+#set $set-qt QT_QPA_PLATFORMTHEME,qt6ct 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -30,6 +31,11 @@ output * bg $HOME/.config/backgrounds/Everforest/fog_forest_2.png fill
           timeout 300 'swaylock -f -c 000000' \
           timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
           before-sleep 'swaylock -f -c 000000'
+  
+#set gtk apps to dark mode
+exec = gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
+exec = gsettings set org.gnome.desktop.interface gtk-theme "adw-gtk3" 
+
 
 ### Input configuration
 #
@@ -65,6 +71,9 @@ output * bg $HOME/.config/backgrounds/Everforest/fog_forest_2.png fill
 
     # Start your launcher
     bindsym $mod+d exec $file_manager
+   
+    # kill waybar
+    bindsym $mod+q exec pkill waybar
     
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
