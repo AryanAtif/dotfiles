@@ -8,6 +8,8 @@ vim.opt.expandtab = true
 
 vim.smartindent = true
 
+vim.opt.foldenable = false
+
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
