@@ -211,9 +211,9 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym Print exec grim
+    bindsym Print exec grim -g - "$HOME/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S.png')"  | wl-copy
 
-    bindsym Shift+Print exec slurp | grim -g - "$HOME/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S.png')"
+    bindsym Shift+Print exec slurp | grim -g - - | tee "$HOME/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S.png')" | wl-copy
 
 bindsym --whole-window $mod+button4 workspace prev
 bindsym --whole-window $mod+button5 workspace next
