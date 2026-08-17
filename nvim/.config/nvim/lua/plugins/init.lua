@@ -18,6 +18,23 @@ return {
 	  build = ':TSUpdate',
 	},
 
+-- neotree
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+    },
+    lazy = false, -- neo-tree will lazily load itself
+  },
+
+
+-------------------
+-- COLOR THEMES
+-------------------
+
+
 -- Color theme: NightFox 
 --	{
 --		"EdenEast/nightfox.nvim" 
@@ -26,16 +43,10 @@ return {
 
 -- Color theme: github-dark
   {
-    'projekt0n/github-nvim-theme',
-    name = 'github-theme',
-    config = function()
-      require('github-theme').setup({
-        -- ...
-      })
-
-      vim.cmd('colorscheme github_dark_default')
-    end,
-  }
-
+    "bluz71/vim-moonfly-colors",
+    name = "moonfly",
+    lazy = false,
+    priority = 1000
+  },
 }
 

@@ -1,3 +1,3 @@
 require("config")
 --require("nightfox").load()
-require("github-theme").load()
+vim.cmd [[colorscheme moonfly]]
