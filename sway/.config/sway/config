@@ -74,6 +74,7 @@ exec = gsettings set org.gnome.desktop.interface gtk-theme "adw-gtk3"
    
     # kill waybar
     bindsym $mod+q exec pkill waybar
+
     
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
