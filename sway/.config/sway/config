@@ -13,11 +13,13 @@ set $term kitty
 set $menu wofi --show drun
 set $file_manager dolphin 
 
+set $calc io.github.Qalculate.qalculate-qt
+
 #set $set-qt QT_QPA_PLATFORMTHEME,qt6ct 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg $HOME/.config/backgrounds/Everforest/fog_forest_2.png fill
+output * bg $HOME/.config/backgrounds/Everforest/fuji.jpg fill
 #
 # Example configuration:
 #
@@ -69,12 +71,14 @@ exec = gsettings set org.gnome.desktop.interface gtk-theme "adw-gtk3"
     # Start your launcher
     bindsym $mod+space exec $menu
 
-    # Start your launcher
+    # Open the File Manger 
     bindsym $mod+d exec $file_manager
    
     # kill waybar
     bindsym $mod+q exec pkill waybar
 
+    # Open the Calculator
+    bindsym XF86Calculator exec $calc
     
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -218,6 +222,11 @@ bindsym $mod+r mode "resize"
 
 bindsym --whole-window $mod+button4 workspace prev
 bindsym --whole-window $mod+button5 workspace next
+
+#
+# Custom Keybinds
+#
+
 
 #
 #No titlebars
