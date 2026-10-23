@@ -43,6 +43,9 @@ exec = gsettings set org.gnome.desktop.interface gtk-theme "adw-gtk3"
 #
 # Example configuration:
 #
+   input * {
+       xkb_options caps:escape
+   }
 #   input type:touchpad {
 #       dwt enabled
 #       tap enabled
